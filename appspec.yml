@@ -1,11 +1,9 @@
-version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /home/ec2-user/app
-
-hooks:
-  AfterInstall:
-    - location: scripts/run_docker.sh
-      timeout: 300
-      runas: ec2-user
+version: 1
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: ""
+        LoadBalancerInfo:
+          ContainerName: sprinrajco
+          ContainerPort: 8080
