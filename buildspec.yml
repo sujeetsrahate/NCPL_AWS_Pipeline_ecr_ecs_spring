@@ -17,16 +17,16 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t cicdncplimage .
-      - docker tag cicdncplimage:latest jatha1994/cicdncplimage:latest
+      - docker build -t project6image .
+      - docker tag project6image:latest jatha1994/project6image:latest
 
   post_build:
     commands:
       - echo Pushing Docker image to Docker Hub...
-      - docker push jatha1994/cicdncplimage:latest
+      - docker push jatha1994/project6image:latest
       - echo Writing imagedefinitions.json...
       - ls -l
-      - printf '[{"name":"sprinrajco","imageUri":"jatha1994/cicdncplimage:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"sprinrajco","imageUri":"jatha1994/project6image:latest"}]' > imagedefinitions.json
       - echo Writing appspec.yml...
       
 
