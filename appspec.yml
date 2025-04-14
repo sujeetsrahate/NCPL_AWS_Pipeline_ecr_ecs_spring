@@ -6,5 +6,5 @@ Resources:
       Properties:
         TaskDefinition: ""
         LoadBalancerInfo:
-          ContainerName: sprinrajco
+          ContainerName: "sprinrajco"
           ContainerPort: 8080
