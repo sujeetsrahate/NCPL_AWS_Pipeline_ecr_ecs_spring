@@ -12,4 +12,9 @@ public class HomeController {
         model.addAttribute("message", "Welcome to My Spring Boot Web Application!");
         return "home";
     }
+	@GetMapping("/health")
+    @ResponseBody
+    public String healthCheck() {
+        return "OK";
+    }
 }
